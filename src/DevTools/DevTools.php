@@ -45,6 +45,11 @@ class DevTools extends PluginBase implements CommandExecutor{
             $this->getServer()->getPluginManager()->loadPlugins($this->getServer()->getPluginPath(), ["FolderPluginLoader\\FolderPluginLoader"]);
             $this->getLogger()->info("Registered folder plugin loader");
             $this->getServer()->enablePlugins(PluginLoadOrder::STARTUP);
+            
+            $this->getServer()->getScheduler()->scheduleDelayedTask(
+            new \DevTools\tasks\LoadFolderPluginsTask(),
+            30
+        );
         }
     }
 
