@@ -30,6 +30,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginLoadOrder;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
+use DevTools\tasks\LoadFolderPluginsTask;
 
 class DevTools extends PluginBase implements CommandExecutor{
 
